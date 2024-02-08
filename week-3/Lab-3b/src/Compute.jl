@@ -36,7 +36,9 @@ function bubble_sort(array::Array{T,1};
                 arr[j+1] = arr[j]
                 arr[j] = x
                 # ...
-
+                tmp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = tmp
             end
         end
     end
@@ -60,7 +62,7 @@ This is a `mutating` function.
 ### More information
 * Algorithm: https://en.wikipedia.org/wiki/Bubble_sort
 """
-function bubble_sort!(array::Array{T,1}; 
+function bubble_sort_2(array::Array{T,1}; 
     sounds::Union{Nothing, Dict{Int64, Tuple{Matrix{Float64}, Float32}}} = nothing)::Array{T,1} where T <: Number
 
     # initialize -
@@ -84,6 +86,9 @@ function bubble_sort!(array::Array{T,1};
                 arr[j] = x
                 # ...
 
+                tmp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = tmp
             end
         end
     end

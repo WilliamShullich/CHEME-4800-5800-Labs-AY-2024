@@ -32,6 +32,9 @@ function bubble_sort(array::Array{T,1};
             if arr[j] > arr[j+1]
 
                 # TODO: swap that values at j and j+1
+                x = arr[j+1]
+                arr[j+1] = arr[j]
+                arr[j] = x
                 # ...
 
             end
@@ -76,6 +79,9 @@ function bubble_sort!(array::Array{T,1};
             if arr[j] > arr[j+1]
 
                 # TODO: swap that values at j and j+1
+                x = arr[j+1]
+                arr[j+1] = arr[j]
+                arr[j] = x
                 # ...
 
             end
